@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="main.content">
 
   <!-- SITE-HEADER -->
   <header class="site-header">
   <div class="container new-container">
     <h2 class="site-header-title">Where in the world?</h2>
-    <button class="site-header-btn" type="submit">Dark Mode</button>
+    <button class="site-header-btn" type="button">Dark Mode</button>
   </div>
   </header>
 
@@ -31,15 +31,16 @@
       <div class="hero-form">
         <form action="index.html" class="site-form">
           <input class="hero-input" type="text" name="text" placeholder="Search for a country…">
-
-          <select class="hero-option" name="select">
-            <option value="nsjbd">Filter by Region</option>
-            <option value="dnkfjbfjk">Africa</option>
-            <option value="dnkfjbfjk">America</option>
-            <option value="dnkfjbfjk">Asia</option>
-            <option value="dnkfjbfjk">Europe</option>
-            <option value="dnkfjbfjk">Oceania</option>
-          </select>
+          <label>
+            <input class="hero-option" type="text" list="option-input" placeholder="Filter by Region" required>
+            <datalist id="option-input">
+              <option>Africa</option>
+              <option>America</option>
+              <option>Asia</option>
+              <option>Europe</option>
+              <option>Oceania</option>
+            </datalist>
+          </label>
         </form>
 
         <ul class="site-hero-list">
@@ -119,7 +120,6 @@
       </div>
     </div>
   </main>
-
 
   <!-- SITE-JS -->
   <script src="js/main.js"></script>
