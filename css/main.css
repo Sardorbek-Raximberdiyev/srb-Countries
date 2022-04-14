@@ -67,8 +67,22 @@ body{
   font-size: 24px;
   line-height: 33px;
   font-weight: 800;
-  color: var(--title-color);
   margin-right: 10px;
+}
+
+.site-header-title-link{
+  display: inline-block;
+  color: var(--title-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header-title-link:hover{
+  opacity: 0.8;
+}
+
+.site-header-title-link:active{
+  opacity: 0.6;
 }
 
 .site-header-btn {
@@ -132,15 +146,9 @@ body{
   padding: 18px 77px 18px 24px;
   line-height: 20px;
   font-weight: 400;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url(../images/option-icon.svg);
-  background-repeat: no-repeat;
-  background-position: 170px center;
   color: var(--title-color);
   background-color: var(--bc-header-color);
-  box-shadow: 0px 2px 9px 0px #0000000E;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.0532);
 }
 
 .site-hero-list {
@@ -210,19 +218,26 @@ body{
 }
 
 .block-hero-link {
-  display: inline-block;
+  display: inline-flex;
   width: 136px;
   margin-bottom: 80px;
-  padding: 10px 39px 10px 62px;
+  padding: 10px 39px 10px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
   color: var(--title-color);
-  background-image: url(../images/call-made.svg);
-  background-repeat: no-repeat;
-  background-position: 32px center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-hero-link-svg{
+  display: block;
+  width: 20px;
+  height: 20px;
+  /* margin-left: 32px; */
+  /* padding-top: 5px; */
 }
 
 .block-hero-content {
@@ -288,6 +303,7 @@ body{
 }
 
 .block-hero-footer-btn {
+  display: inline-block;
   width: 96px;
   padding-top: 5px;
   padding-bottom: 4px;
@@ -300,6 +316,16 @@ body{
   border-radius: 2px;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.0562);
   color: var(--title-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.block-hero-footer-btn:hover{
+  opacity: 0.8;
+}
+
+.block-hero-footer-btn:active{
+  opacity: 0.6;
 }
 
 .block-hero-footer-btn:first-child{
